@@ -21,7 +21,7 @@ const App = () => {
   const fetchImages = () => {
     setLoading(true);
     axios.get(apiUrl, {
-      params: { query, page },
+      params: { query, page, per_page: 12 },
       headers: {
         Authorization: `Client-ID ${accessKey}`
       }
