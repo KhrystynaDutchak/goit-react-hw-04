@@ -62,7 +62,9 @@ const App = () => {
        <SearchBar onSubmit={handleSubmit}  /> 
       {error && <ErrorMessage message={error} />}
       <ImageGallery images={images} onImageClick={handleImageClick} />
-      {loading && <Loader />}
+      {loading && 
+        <div className='flexCenter'><Loader /></div>
+      }
       {images.length > 0 && !loading && (
         <LoadMoreBtn handleLoadMore={handleLoadMore} />
       )}
